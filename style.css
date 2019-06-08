@@ -1,13 +1,10 @@
 /* Header Begin */
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400");
-.hero {
+/* .hero {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 2200px;
+  height: 1600px;
   background: url("https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png");
   background-attachment: fixed;
   background-position: center;
@@ -15,8 +12,11 @@
   background-size: cover;
   opacity: 1;
   z-index: -100;
-}
-
+  
+} */
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400");
 .side_menu {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -58,13 +58,18 @@
   z-index: 100;
 }
 
-.burger_box a.menu-icon:hover,
+.burger_box a.menu-icon:hover {
+  transform: rotate(360deg);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-out;
+}
+
 .burger_box a.menu-icon.opened {
   opacity: 1;
 }
 
 .burger_box a.menu-icon.opened {
-  background: rgba(0, 20, 60, 0.9);
+  background: transparent;
 }
 
 .burger_box .menu-icon_box {
@@ -117,7 +122,7 @@
 }
 
 .burger_box .menu-icon.opened .menu-icon_line {
-  background: white;
+  background: black;
   top: 10px;
 }
 
@@ -167,9 +172,20 @@
   opacity: 1;
 }
 
+.clientlogin {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Header End */
 body {
-  background: linear-gradient(135deg, #49ffb6 -20%, #7f4dea 100%);
+  background: linear-gradient(135deg, #49ddff -20%, #ea4d4d 100%);
   background-repeat: no-repeat;
   padding: 15px 0;
   font-family: 'Montserrat', sans-serif;
@@ -222,61 +238,59 @@ body {
 /* Ad Copy CSS */
 .copybackground {
   position: relative;
-  background: #8093F1;
-  width: 355px;
-  height: 165px;
+  background: rgba(0, 20, 60, 0.9);
+  border-radius: 800px;
+  width: 200px;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
   top: -120px;
 }
 .copybackground:before {
   position: absolute;
+  border-radius: 800px;
   content: '';
-  width: 333px;
-  height: 145px;
-  background: white;
+  opacity: 0.8;
+  width: 180px;
+  height: 180px;
   top: 10px;
   left: 10px;
+  background: linear-gradient(135deg, #49ddff -20%, #ea4d4d 100%);
 }
 
-.headline1:before {
+.arrowstem:before {
   position: absolute;
   content: '';
-  width: 150px;
-  height: 18px;
-  background: lightgray;
-  top: 20px;
-  left: 20px;
+  width: 116px;
+  height: 9px;
+  background: #00143c;
+  top: 130px;
+  left: -22px;
+  transform: rotate(-27deg);
 }
 
-.headline2:before {
+.arrowhead {
   position: absolute;
-  content: '';
-  width: 150px;
-  height: 18px;
-  background: lightgray;
-  top: 20px;
-  left: 180px;
+  border-top: 30px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 37px solid #00143c;
+  top: 85px;
+  left: 52px;
+  transform: rotate(35deg);
 }
 
-.displayurl:before {
+.uptrend {
+  width: 80px;
+  height: 100px;
+  border-style: solid;
+  border-width: 0 0 0 10px;
+  border-color: transparent transparent transparent #00143c;
+  border-radius: 100px 0 0 0;
   position: absolute;
-  content: '';
-  width: 180px;
-  height: 10px;
-  background: blue;
-  top: 45px;
-  left: 20px;
-}
-
-.description:before {
-  position: absolute;
-  content: '';
-  width: 310px;
-  height: 80px;
-  background: lightgrey;
-  top: 62px;
-  left: 20px;
+  top: -110px;
+  left: 5px;
+  transform: scaleX(-1);
+  transform: rotate(174deg);
 }
 
 /* Sign Up Button/Anchor To Contact Form */
@@ -335,6 +349,32 @@ li:hover {
   font-family: 'Montserrat', sans-serif;
 }
 
+.innybutton {
+  background-image: linear-gradient(135deg, #49ddff -20%, #ea4d4d 100%);
+  position: relative;
+  padding: 3px;
+  display: inline-block;
+  border-radius: 7px;
+  opacity: 0.7;
+}
+.innybutton span {
+  display: inline-block;
+  background: #00143c;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.innybutton:hover {
+  -webkit-transition: all 2000ms ease-in-out;
+  transition: all 2000ms ease-in-out;
+  background-image: linear-gradient(135deg, #49ddff -20%, #ea4d4d 100%);
+  opacity: 1;
+}
+
 /* Social Proof */
 .sproof {
   position: absolute;
@@ -347,7 +387,7 @@ li:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0;
 }
 
 /* Testimonials */
@@ -741,7 +781,8 @@ small {
 .designby {
   font-family: 'Montserrat', sans-serif;
   color: white;
+  font-size: 12px;
   display: flex;
-  margin-left: 10%;
+  margin-left: 3%;
   margin-top: 1%;
 }
